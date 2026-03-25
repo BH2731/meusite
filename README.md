@@ -1,2 +1,2 @@
 # meusite
-Primeiro site com as instruções da prô Luyra :)
+Site com as instruções da pro Luyra
