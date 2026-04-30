@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu do Futebol Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<script>
+    function abrirPopup(nome, imagem, descricao){
+        url =`popup.html?produto=${encodeURIComponent(nome)}&imagem=${encodeURIComponent(imagem)}&descricao=${encodeURIComponent(descricao)}` 
+        window.open(url, "_blank", "width=850, height=450")
+    }
+</script>
+<body>
+    <header>
+       <div>
+           <a href="index.html"><img src="../img/logo.png" class="logo"></a>
+           <nav>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="exposicoes.html" class="active">Exposições</a></li>
+               </ul>
+           </nav>
+       </div>
+    </header>
+
+    <main>  
+        <section id="exposicoes" class="section_exposições">
+            <h1>Exposições</h1>
+            <p>
+                <script>
+                    data = new Date
+                    diaSemana = new Array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado')
+                    meses = new Array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
+
+                    document.write(`${diaSemana[data.getDay()]} - Dia ${data.getDate()} de ${meses[data.getMonth()]} de ${data.getFullYear() - 400}`)
+                </script>
+            </p>
+            <div class="exposicoes" >
+                <div class="exposicao">
+                    <img src="../img/exposição1.jpg" onclick="abrirPopup('Camisas Históricas', '../img/exposição1.jpg', 'Uma exposição que mostracamisas de time históricas de uma diversidade de clubes do mundo.')">
+                    <h2>Camisas Históricas</h2>
+                </div>
+                <div class="exposicao">
+                    <img src="../img/exposição2.webp" onclick="abrirPopup('Chuteiras Históricas', '../img/exposição2.webp', 'Uma exposição que mostracamisas de time históricas de uma diversidade de clubes do mundo.')">
+                    <h2>Chuteiras Históricas</h2>
+                </div>
+                <div class="exposicao">
+                    <img src="../img/exposição3.jpg" onclick="abrirPopup('Simulador de Pênalti', '../img/exposição3.jpg', 'Uma exposição que mostracamisas de time históricas de uma diversidade de clubes do mundo.')">
+                    <h2>Simulador de Pênalti</h2>
+                </div>
+                <div class="exposicao" >
+                    <img src="../img/exposição4.jpg" onclick="abrirPopup('Sala de Manchetes', '../img/exposição4.jpg', 'Uma exposição que mostracamisas de time históricas de uma diversidade de clubes do mundo.')">
+                    <h2>Sala de Manchetes</h2>
+                </div>
+                <div class="exposicao">
+                    <img src="../img/exposição5.jpg" onclick="abrirPopup('Sala do Futebol de Dedo', '../img/exposição5.jpg', 'Uma exposição que mostracamisas de time históricas de uma diversidade de clubes do mundo.')">
+                    <h2>Sala do Futebol de Dedo</h2>
+                </div>
+                <div class="exposicao">
+                    <img src="../img/exposição6.png" onclick="abrirPopup('Mural de Fíguras', '../img/exposição6.png', 'Uma exposição que mostracamisas de time históricas de uma diversidade de clubes do mundo.')">
+                    <h2>Mural de Fíguras</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_tuor">
+            <h1>Vídeo de Tuor</h1>
+            <iframe width="1000" height="600" src="https://www.youtube.com/embed/rJK9_L-9g8w?si=XX-Mmu_v46Ml9GeZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+     <footer>
+        <img src="../img/logo.png" class="logo">
+        <h2>Museu do Futebol Virtual | Todos os Direitos Reservados ©</h2>
+        <div class="redes_sociais">
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/museudofutebol/" target="_blank"><h3>@museudofutebol</h3></a>
+        </div>
+    </footer>
+</body>
+</html>
